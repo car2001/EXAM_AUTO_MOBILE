@@ -1,0 +1,306 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity QA EXAM MOBILE</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="6c6171619fe59c0473163faa5ac880a4bc33a51ef252d23725653eef3bc08bf2.html">Validar Carrito De Compras</a></span>
+                > <span class="truncate-60"><a
+                    href="b559f2fadd836075b7755bfd2148792f1419ca1817a5defaaa621857243c300f.html">Agregar productos al carrito de compras </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 21-12-2024 06:24</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Validar Carrito De Compras </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="05a2f8dca2015e88d51cb385d1b7a5488b7a27eb10b9400ea589244301fe43d9.html">Add Store
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5698da923f295f46ce5ab64ced2311fc60caa4e36b32112606d3adcfdce3f60b.html">30 To 60 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5db10142cf912535387f537c7fe63cd5af29293bade65bc499fadc4301673016.html">Store
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-exclamation-triangle-fill error-icon fa-2x' title='ERROR'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="error-color">Agregar productos al carrito de compras
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given estoy en la aplicación de SauceLabs<br>And valido que carguen correctamente los productos en la galeria<br>When agrego &lt;UNIDADES&gt; del siguiente producto "&lt;PRODUCTO&gt;"<br>Then valido el carrito de compra actualice correctamente</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: expected:(1) but was:(10)</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.nttdata.steps.ProductDetailSteps.VerifyQuantityItemInCart(ProductDetailSteps.java:11)<br />net.thucydides.core.steps.BaseMethodRunner.invokeMethod(BaseMethodRunner.java:18)<br />net.thucydides.core.steps.NormalMethodRunner.invokeMethodAndNotifyFailures(NormalMethodRunner.java:18)<br />net.thucydides.core.steps.StepInterceptor.runNormalMethod(StepInterceptor.java:420)<br />net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:195)<br />net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:92)<br />com.nttdata.stepsdefinitions.StoreStepsDef.valido_el_carrito_de_compra_actualice_correctamente(StoreStepsDef.java:37)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:56)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:332)<br />io.cucumber.junit.CucumberSerenityBaseRunner.runChild(CucumberSerenityBaseRunner.java:53)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource8495878324500839028.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="37c2dd6f9c352e3355ddce5f9cd734a410ed1da40b40b8abf3168c9e731cb516.png" title=" 1: Agregar productos al carrito de compras ({PRODUCTO=Sauce Labs Backpack, UNIDADES=1})" width="0"/>
+                <img src="37c2dd6f9c352e3355ddce5f9cd734a410ed1da40b40b8abf3168c9e731cb516.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs" width="0"/>
+                <img src="37c2dd6f9c352e3355ddce5f9cd734a410ed1da40b40b8abf3168c9e731cb516.png" title=" And valido que carguen correctamente los productos en la galeria" width="0"/>
+                <img src="34bd5a3004c824b0f3f1c27f1e6b04d6d6119ab87e6cebcf2d049fd7cc41c5eb.png" title=" When agrego 1 del siguiente producto &quot;Sauce Labs Backpack&quot;" width="0"/>
+                <img src="ac06bdfb1fe7bf761422cd34d114a1f7c59eb3c54b514e3ac458ee3efd590713.png" title=" Then valido el carrito de compra actualice correctamente" width="0"/>
+                <img src="ac06bdfb1fe7bf761422cd34d114a1f7c59eb3c54b514e3ac458ee3efd590713.png" title=" 1: Agregar productos al carrito de compras ({PRODUCTO=Sauce Labs Backpack, UNIDADES=1}) (completed)" width="0"/>
+                <img src="37c2dd6f9c352e3355ddce5f9cd734a410ed1da40b40b8abf3168c9e731cb516.png" title=" 2: Agregar productos al carrito de compras ({PRODUCTO=Sauce Labs Bolt T-Shirt, UNIDADES=1})" width="0"/>
+                <img src="37c2dd6f9c352e3355ddce5f9cd734a410ed1da40b40b8abf3168c9e731cb516.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs" width="0"/>
+                <img src="37c2dd6f9c352e3355ddce5f9cd734a410ed1da40b40b8abf3168c9e731cb516.png" title=" And valido que carguen correctamente los productos en la galeria" width="0"/>
+                <img src="f08b456cf158d22e233751c67b6619e7a8ef2fbc8885043d4251f91067bd9534.png" title=" When agrego 1 del siguiente producto &quot;Sauce Labs Bolt T-Shirt&quot;" width="0"/>
+                <img src="e7d0e7d5cc67a6c557132338017b1ed1fac7676e58e313df7a91a2e085604cd2.png" title=" Then valido el carrito de compra actualice correctamente" width="0"/>
+                <img src="e7d0e7d5cc67a6c557132338017b1ed1fac7676e58e313df7a91a2e085604cd2.png" title=" Verify quantity item in cart: 1" width="0"/>
+                <img src="37c2dd6f9c352e3355ddce5f9cd734a410ed1da40b40b8abf3168c9e731cb516.png" title=" 3: Agregar productos al carrito de compras ({PRODUCTO=Sauce Labs Bike Light, UNIDADES=2})" width="0"/>
+                <img src="37c2dd6f9c352e3355ddce5f9cd734a410ed1da40b40b8abf3168c9e731cb516.png" title=" Given estoy en la aplicaci&oacute;n de SauceLabs" width="0"/>
+                <img src="37c2dd6f9c352e3355ddce5f9cd734a410ed1da40b40b8abf3168c9e731cb516.png" title=" And valido que carguen correctamente los productos en la galeria" width="0"/>
+                <img src="73a52e2a3f9587ea3057779c7fde4234980ea166fd8be921dbea93ac47f1e268.png" title=" When agrego 2 del siguiente producto &quot;Sauce Labs Bike Light&quot;" width="0"/>
+
+                <img src="73a52e2a3f9587ea3057779c7fde4234980ea166fd8be921dbea93ac47f1e268.png" title=" Add product to store: Sauce Labs Bike Light, 2: <span class='error-color'>ERROR</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.19</span>
+</div>
+</body>
+</html>

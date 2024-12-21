@@ -1,0 +1,6 @@
+com\nttdata\steps\StoreSteps.class
+com\nttdata\screens\StoreScreen.class
+com\nttdata\screens\ProductDetailScreen.class
+com\nttdata\steps\ProductDetailSteps.class
+com\nttdata\runners\CucumberTestSuite.class
+com\nttdata\stepsdefinitions\StoreStepsDef.class
